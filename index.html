@@ -7,51 +7,424 @@
     <title>현대로보틱스</title>
     <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
     <script src="assets/js/include.js"></script>
+    <script src="assets/js/main.js"></script>
     <link href="assets/css/reset.css" rel="stylesheet">
     <link href="assets/css/main.css" rel="stylesheet">
 </head>
 <body>
     <header id="header"></header>
-    <main>
-        <div id="container">
-            <section id="distributor">
-                <div class="distributor-inner">
-                    <ul>
-                        <li><a href="javascript:void(0)"><img src="./assets/images/common/home.png" alt="홈 이미지"></a></li>
-                        <li><a href="javascript:void(0)">회원관리</a></li>
-                        <li><a href="javascript:void(0)">대리점 회원</a></li>
-                    </ul>
-                    <h1>대리점 회원</h1>
-                    <div class="btn-wrap">
-                        <button type="button">활성(10,345)</button>
-                        <button type="button">비활성화(1,345)</button>
-                    </div>
+    <div id="container">
+        <section id="distributor">
+            <div class="distributor-inner">
+                <ul>
+                    <li><a href="javascript:void(0)"><img src="./assets/images/common/home.png" alt="홈 이미지"></a></li>
+                    <li><a href="javascript:void(0)">회원관리</a></li>
+                    <li><a href="javascript:void(0)">대리점 회원</a></li>
+                </ul>
+                <strong>대리점 회원</strong>
+                <div class="btn-wrap">
+                    <button class="select" type="button">활성(10,345)</button>
+                    <button class="non-select" type="button">비활성화(1,345)</button>
+                </div>
+                <div class="search-container">
                     <div>
-                        <div>
-                            <label for="search"></label>
-                            <input type="text" id="search">
-                            <button>검색</button>
-                        </div>
-                        <div>
-                            <label for="regionAll"></label>
-                            <select id="regionAll">
-                                <option selected>지역전체</option>
-                                <option>하나</option>
-                                <option>둘</option>
-                                <option>셋</option>
-                            </select>
-                            <label for="count"></label>
-                            <select id="count">
-                                <option selected>25개</option>
-                                <option>20개</option>
-                                <option>15개</option>
-                                <option>10개</option>
-                            </select>
-                        </div>
+                        <label class="hide-item" for="search"></label>
+                        <input type="text" id="search" placeholder="검색어 입력">
+                        <button class="disable">검색</button>
+                    </div>
+                    <div class="choice">
+                        <label class="hide-item" for="regionAll"></label>
+                        <select class="txt-select" id="regionAll">
+                            <option selected disabled hidden>지역전체</option>
+                            <option>하나</option>
+                            <option>둘</option>
+                            <option>셋</option>
+                        </select>
+                        <label class="hide-item" for="count"></label>
+                        <select class="num-select" id="count">
+                            <option selected>25개</option>
+                            <option>20개</option>
+                            <option>15개</option>
+                            <option>10개</option>
+                        </select>
+                        <button class="select" type="button">등록<img src="./assets/images/common/plus.png"></button>
                     </div>
                 </div>
-            </section>
-        </div>
-    </main>
+                <div class="result">
+                    <table>
+                        <caption class="hide-item">리스트</caption>
+                        <colgroup>
+                            <col width="4%"/>
+                            <col width="8%"/>
+                            <col width="10%"/>
+                            <col width="15%"/>
+                            <col width="9%"/>
+                            <col width="6%"/>
+                            <col width="22%"/>
+                            <col width="6%"/>
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>No.</th>
+                                <th>대리점명</th>
+                                <th>연락처</th>
+                                <th>이메일</th>
+                                <th>가입일</th>
+                                <th>대리점 번호</th>
+                                <th>대리점 주소</th>
+                                <th>상담</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" id="check01" />
+                                    <label for="check01"></label>
+                                </td>
+                                <td>마산2점</td>
+                                <td>010-1234-5678</td>
+                                <td>masan@HYUNDAIrobotics.com</td>
+                                <td>2022-06-08</td>
+                                <td>29</td>
+                                <td>마산시 마산회원구 구암1동 구암로 12</td>
+                                <td>13건</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" id="check02" />
+                                    <label for="check02"></label>
+                                </td>
+                                <td>마산2점</td>
+                                <td>010-1234-5678</td>
+                                <td>masan@HYUNDAIrobotics.com</td>
+                                <td>2022-06-08</td>
+                                <td>29</td>
+                                <td>마산시 마산회원구 구암1동 구암로 12</td>
+                                <td>13건</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" id="check03" />
+                                    <label for="check03"></label>
+                                </td>
+                                <td>마산2점</td>
+                                <td>010-1234-5678</td>
+                                <td>masan@HYUNDAIrobotics.com</td>
+                                <td>2022-06-08</td>
+                                <td>29</td>
+                                <td>마산시 마산회원구 구암1동 구암로 12</td>
+                                <td>13건</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" id="check04" />
+                                    <label for="check04"></label>
+                                </td>
+                                <td>마산2점</td>
+                                <td>010-1234-5678</td>
+                                <td>masan@HYUNDAIrobotics.com</td>
+                                <td>2022-06-08</td>
+                                <td>29</td>
+                                <td>마산시 마산회원구 구암1동 구암로 12</td>
+                                <td>13건</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" id="check05" />
+                                    <label for="check05"></label>
+                                </td>
+                                <td>마산2점</td>
+                                <td>010-1234-5678</td>
+                                <td>masan@HYUNDAIrobotics.com</td>
+                                <td>2022-06-08</td>
+                                <td>29</td>
+                                <td>마산시 마산회원구 구암1동 구암로 12</td>
+                                <td>13건</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" id="check06" />
+                                    <label for="check06"></label>
+                                </td>
+                                <td>마산2점</td>
+                                <td>010-1234-5678</td>
+                                <td>masan@HYUNDAIrobotics.com</td>
+                                <td>2022-06-08</td>
+                                <td>29</td>
+                                <td>마산시 마산회원구 구암1동 구암로 12</td>
+                                <td>13건</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" id="check07" />
+                                    <label for="check07"></label>
+                                </td>
+                                <td>마산2점</td>
+                                <td>010-1234-5678</td>
+                                <td>masan@HYUNDAIrobotics.com</td>
+                                <td>2022-06-08</td>
+                                <td>29</td>
+                                <td>마산시 마산회원구 구암1동 구암로 12</td>
+                                <td>13건</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" id="check08" />
+                                    <label for="check08"></label>
+                                </td>
+                                <td>마산2점</td>
+                                <td>010-1234-5678</td>
+                                <td>masan@HYUNDAIrobotics.com</td>
+                                <td>2022-06-08</td>
+                                <td>29</td>
+                                <td>마산시 마산회원구 구암1동 구암로 12</td>
+                                <td>13건</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" id="check09" />
+                                    <label for="check09"></label>
+                                </td>
+                                <td>마산2점</td>
+                                <td>010-1234-5678</td>
+                                <td>masan@HYUNDAIrobotics.com</td>
+                                <td>2022-06-08</td>
+                                <td>29</td>
+                                <td>마산시 마산회원구 구암1동 구암로 12</td>
+                                <td>13건</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" id="check10" />
+                                    <label for="check10"></label>
+                                </td>
+                                <td>마산2점</td>
+                                <td>010-1234-5678</td>
+                                <td>masan@HYUNDAIrobotics.com</td>
+                                <td>2022-06-08</td>
+                                <td>29</td>
+                                <td>마산시 마산회원구 구암1동 구암로 12</td>
+                                <td>13건</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" id="check11" />
+                                    <label for="check11"></label>
+                                </td>
+                                <td>마산2점</td>
+                                <td>010-1234-5678</td>
+                                <td>masan@HYUNDAIrobotics.com</td>
+                                <td>2022-06-08</td>
+                                <td>29</td>
+                                <td>마산시 마산회원구 구암1동 구암로 12</td>
+                                <td>13건</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" id="check12" />
+                                    <label for="check12"></label>
+                                </td>
+                                <td>마산2점</td>
+                                <td>010-1234-5678</td>
+                                <td>masan@HYUNDAIrobotics.com</td>
+                                <td>2022-06-08</td>
+                                <td>29</td>
+                                <td>마산시 마산회원구 구암1동 구암로 12</td>
+                                <td>13건</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" id="check13" />
+                                    <label for="check13"></label>
+                                </td>
+                                <td>마산2점</td>
+                                <td>010-1234-5678</td>
+                                <td>masan@HYUNDAIrobotics.com</td>
+                                <td>2022-06-08</td>
+                                <td>29</td>
+                                <td>마산시 마산회원구 구암1동 구암로 12</td>
+                                <td>13건</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" id="check14" />
+                                    <label for="check14"></label>
+                                </td>
+                                <td>마산2점</td>
+                                <td>010-1234-5678</td>
+                                <td>masan@HYUNDAIrobotics.com</td>
+                                <td>2022-06-08</td>
+                                <td>29</td>
+                                <td>마산시 마산회원구 구암1동 구암로 12</td>
+                                <td>13건</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" id="check15" />
+                                    <label for="check15"></label>
+                                </td>
+                                <td>마산2점</td>
+                                <td>010-1234-5678</td>
+                                <td>masan@HYUNDAIrobotics.com</td>
+                                <td>2022-06-08</td>
+                                <td>29</td>
+                                <td>마산시 마산회원구 구암1동 구암로 12</td>
+                                <td>13건</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" id="check16" />
+                                    <label for="check16"></label>
+                                </td>
+                                <td>마산2점</td>
+                                <td>010-1234-5678</td>
+                                <td>masan@HYUNDAIrobotics.com</td>
+                                <td>2022-06-08</td>
+                                <td>29</td>
+                                <td>마산시 마산회원구 구암1동 구암로 12</td>
+                                <td>13건</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" id="check17" />
+                                    <label for="check17"></label>
+                                </td>
+                                <td>마산2점</td>
+                                <td>010-1234-5678</td>
+                                <td>masan@HYUNDAIrobotics.com</td>
+                                <td>2022-06-08</td>
+                                <td>29</td>
+                                <td>마산시 마산회원구 구암1동 구암로 12</td>
+                                <td>13건</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" id="check18" />
+                                    <label for="check18"></label>
+                                </td>
+                                <td>마산2점</td>
+                                <td>010-1234-5678</td>
+                                <td>masan@HYUNDAIrobotics.com</td>
+                                <td>2022-06-08</td>
+                                <td>29</td>
+                                <td>마산시 마산회원구 구암1동 구암로 12</td>
+                                <td>13건</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" id="check19" />
+                                    <label for="check19"></label>
+                                </td>
+                                <td>마산2점</td>
+                                <td>010-1234-5678</td>
+                                <td>masan@HYUNDAIrobotics.com</td>
+                                <td>2022-06-08</td>
+                                <td>29</td>
+                                <td>마산시 마산회원구 구암1동 구암로 12</td>
+                                <td>13건</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" id="check20" />
+                                    <label for="check20"></label>
+                                </td>
+                                <td>마산2점</td>
+                                <td>010-1234-5678</td>
+                                <td>masan@HYUNDAIrobotics.com</td>
+                                <td>2022-06-08</td>
+                                <td>29</td>
+                                <td>마산시 마산회원구 구암1동 구암로 12</td>
+                                <td>13건</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" id="check21" />
+                                    <label for="check21"></label>
+                                </td>
+                                <td>마산2점</td>
+                                <td>010-1234-5678</td>
+                                <td>masan@HYUNDAIrobotics.com</td>
+                                <td>2022-06-08</td>
+                                <td>29</td>
+                                <td>마산시 마산회원구 구암1동 구암로 12</td>
+                                <td>13건</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" id="check22" />
+                                    <label for="check22"></label>
+                                </td>
+                                <td>마산2점</td>
+                                <td>010-1234-5678</td>
+                                <td>masan@HYUNDAIrobotics.com</td>
+                                <td>2022-06-08</td>
+                                <td>29</td>
+                                <td>마산시 마산회원구 구암1동 구암로 12</td>
+                                <td>13건</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" id="check23" />
+                                    <label for="check23"></label>
+                                </td>
+                                <td>마산2점</td>
+                                <td>010-1234-5678</td>
+                                <td>masan@HYUNDAIrobotics.com</td>
+                                <td>2022-06-08</td>
+                                <td>29</td>
+                                <td>마산시 마산회원구 구암1동 구암로 12</td>
+                                <td>13건</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" id="check24" />
+                                    <label for="check24"></label>
+                                </td>
+                                <td>마산2점</td>
+                                <td>010-1234-5678</td>
+                                <td>masan@HYUNDAIrobotics.com</td>
+                                <td>2022-06-08</td>
+                                <td>29</td>
+                                <td>마산시 마산회원구 구암1동 구암로 12</td>
+                                <td>13건</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" id="check25" />
+                                    <label for="check25"></label>
+                                </td>
+                                <td>마산2점</td>
+                                <td>010-1234-5678</td>
+                                <td>masan@HYUNDAIrobotics.com</td>
+                                <td>2022-06-08</td>
+                                <td>29</td>
+                                <td>마산시 마산회원구 구암1동 구암로 12</td>
+                                <td>13건</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="page">
+                    <ul>
+                        <li><a href="javascript:void(0)"><img src="./assets/images/common/first_arrow.png" alt="맨 처음 페이지 이동 화살표"></a></li>
+                        <li><a href="javascript:void(0)"><img src="./assets/images/common/prev_arrow.png" alt="이전 페이지 이동 화살표"></a></li>
+                        <li><a href="javascript:void(0)">1</a></li>
+                        <li><a href="javascript:void(0)">2</a></li>
+                        <li><a href="javascript:void(0)">3</a></li>
+                        <li><a href="javascript:void(0)">4</a></li>
+                        <li><a href="javascript:void(0)">5</a></li>
+                        <li><a href="javascript:void(0)">6</a></li>
+                        <li><a href="javascript:void(0)">7</a></li>
+                        <li><a href="javascript:void(0)">8</a></li>
+                        <li><a href="javascript:void(0)">9</a></li>
+                        <li><a href="javascript:void(0)">10</a></li>
+                        <li><a href="javascript:void(0)"><img src="./assets/images/common/next_arrow.png" alt="다음 페이지 이동 화살표"></a></li>
+                        <li><a href="javascript:void(0)"><img src="./assets/images/common/end_arrow.png" alt="맨 마지막 페이지 이동 화살표"></a></li>
+                    </ul>
+                    <button type="button">회원 비활성화</button>
+                </div>
+            </div>
+        </section>
+    </div>
 </body>
 </html>
