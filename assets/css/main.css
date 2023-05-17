@@ -13,7 +13,7 @@ body {
 button {
   box-sizing: border-box;
   border-radius: 0.3rem;
-  font-family: "Noto Sans", sans-serif;
+  font-family: "Noto Sans KR", sans-serif;
   font-weight: 400;
   font-size: 1.6rem;
   line-height: 2.4rem;
@@ -23,6 +23,7 @@ button {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 button.select {
   color: #fff;
@@ -48,7 +49,7 @@ select {
           appearance: none;
   background: url("../../../assets/images/common/arrow_down.png") calc(100% - 1.1rem) center no-repeat #fff;
   background-size: 2.4rem;
-  font-family: "Noto Sans", sans-serif;
+  font-family: "Noto Sans KR", sans-serif;
   font-weight: 400;
   font-size: 1.6rem;
   color: #222;
@@ -68,7 +69,7 @@ select.num-select {
   height: 4.4rem;
 }
 select option {
-  font-family: "Noto Sans", sans-serif;
+  font-family: "Noto Sans KR", sans-serif;
   font-weight: 400;
   font-size: 1.6rem;
   color: #222;
@@ -98,6 +99,122 @@ input[type=checkbox]:checked + label {
   border-color: #3BB88C;
 }
 
+#container #distributor {
+  width: 100%;
+}
+#container #distributor .distributor-inner {
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding-top: 3.3rem;
+}
+#container #distributor .distributor-inner > ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  height: 2.4rem;
+  padding-bottom: 0.3rem;
+}
+#container #distributor .distributor-inner > ul li {
+  position: relative;
+}
+#container #distributor .distributor-inner > ul li:first-child {
+  padding-right: 0.5rem;
+}
+#container #distributor .distributor-inner > ul li:nth-child(3) {
+  padding-left: 1.5rem;
+}
+#container #distributor .distributor-inner > ul li:nth-child(3)::before {
+  content: ">";
+  position: absolute;
+  left: 0.3rem;
+  top: 0;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #999999;
+}
+#container #distributor .distributor-inner > ul li a {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #999999;
+}
+#container #distributor .distributor-inner > strong {
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 700;
+  font-size: 3rem;
+  color: #222;
+  line-height: 4.4rem;
+}
+#container #distributor .distributor-inner .btn-wrap {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 1.6rem 0 1.2rem;
+}
+#container #distributor .distributor-inner .search-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+#container #distributor .distributor-inner .search-container > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.4rem;
+}
+#container #distributor .distributor-inner .search-container > div input {
+  box-sizing: border-box;
+  width: 38rem;
+  height: 4.4rem;
+  background: #fff;
+  border-radius: 0.3rem;
+  border: 1px solid #BBBBBB;
+  padding: 0.9rem;
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  color: #222;
+  line-height: 2.4rem;
+}
+#container #distributor .distributor-inner .search-container > div input::-moz-placeholder {
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  color: #999999;
+  line-height: 2.4rem;
+}
+#container #distributor .distributor-inner .search-container > div input::placeholder {
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  color: #999999;
+  line-height: 2.4rem;
+}
+#container #distributor .distributor-inner .search-container > div input:focus {
+  outline: none;
+}
+#container #distributor .distributor-inner .search-container .choice {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1.4rem;
+}
+#container #distributor .distributor-inner .search-container .choice button {
+  justify-content: flex-start;
+  width: 12rem;
+  padding-left: 3.3rem;
+  gap: 0.5rem;
+}
+
 .page {
   width: 100%;
   display: flex;
@@ -113,6 +230,7 @@ input[type=checkbox]:checked + label {
   gap: 0.6rem;
 }
 .page ul li {
+  position: relative;
   box-sizing: border-box;
   width: 3.2rem;
   height: 3.2rem;
@@ -121,12 +239,27 @@ input[type=checkbox]:checked + label {
   border-radius: 0.3rem;
   text-align: center;
 }
+.page ul li.first-btn a {
+  background: url("../../../assets/images/common/first_arrow.png") no-repeat 100% 20%/auto;
+}
+.page ul li.prev-btn a {
+  background: url("../../../assets/images/common/prev_arrow.png") no-repeat 50% 40%/auto;
+}
+.page ul li.next-btn a {
+  background: url("../../../assets/images/common/next_arrow.png") no-repeat 60% 40%/auto;
+}
+.page ul li.end-btn a {
+  background: url("../../../assets/images/common/end_arrow.png") no-repeat 30% 20%/auto;
+}
 .page ul li a {
+  width: 100%;
+  height: 100%;
   color: #222;
-  font-family: "Noto Sans", sans-serif;
+  font-family: "Noto Sans KR", sans-serif;
   font-size: 1.6rem;
   font-weight: 400;
-  line-height: 3.2rem;
+  line-height: 2.4rem;
+  margin-top: 0.2rem;
 }
 
 .hide-item {
@@ -152,7 +285,7 @@ body {
 button {
   box-sizing: border-box;
   border-radius: 0.3rem;
-  font-family: "Noto Sans", sans-serif;
+  font-family: "Noto Sans KR", sans-serif;
   font-weight: 400;
   font-size: 1.6rem;
   line-height: 2.4rem;
@@ -162,6 +295,7 @@ button {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 button.select {
   color: #fff;
@@ -187,7 +321,7 @@ select {
           appearance: none;
   background: url("../../../assets/images/common/arrow_down.png") calc(100% - 1.1rem) center no-repeat #fff;
   background-size: 2.4rem;
-  font-family: "Noto Sans", sans-serif;
+  font-family: "Noto Sans KR", sans-serif;
   font-weight: 400;
   font-size: 1.6rem;
   color: #222;
@@ -207,7 +341,7 @@ select.num-select {
   height: 4.4rem;
 }
 select option {
-  font-family: "Noto Sans", sans-serif;
+  font-family: "Noto Sans KR", sans-serif;
   font-weight: 400;
   font-size: 1.6rem;
   color: #222;
@@ -237,6 +371,122 @@ input[type=checkbox]:checked + label {
   border-color: #3BB88C;
 }
 
+#container #distributor {
+  width: 100%;
+}
+#container #distributor .distributor-inner {
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding-top: 3.3rem;
+}
+#container #distributor .distributor-inner > ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  height: 2.4rem;
+  padding-bottom: 0.3rem;
+}
+#container #distributor .distributor-inner > ul li {
+  position: relative;
+}
+#container #distributor .distributor-inner > ul li:first-child {
+  padding-right: 0.5rem;
+}
+#container #distributor .distributor-inner > ul li:nth-child(3) {
+  padding-left: 1.5rem;
+}
+#container #distributor .distributor-inner > ul li:nth-child(3)::before {
+  content: ">";
+  position: absolute;
+  left: 0.3rem;
+  top: 0;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #999999;
+}
+#container #distributor .distributor-inner > ul li a {
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #999999;
+}
+#container #distributor .distributor-inner > strong {
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 700;
+  font-size: 3rem;
+  color: #222;
+  line-height: 4.4rem;
+}
+#container #distributor .distributor-inner .btn-wrap {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 1.6rem 0 1.2rem;
+}
+#container #distributor .distributor-inner .search-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+#container #distributor .distributor-inner .search-container > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.4rem;
+}
+#container #distributor .distributor-inner .search-container > div input {
+  box-sizing: border-box;
+  width: 38rem;
+  height: 4.4rem;
+  background: #fff;
+  border-radius: 0.3rem;
+  border: 1px solid #BBBBBB;
+  padding: 0.9rem;
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  color: #222;
+  line-height: 2.4rem;
+}
+#container #distributor .distributor-inner .search-container > div input::-moz-placeholder {
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  color: #999999;
+  line-height: 2.4rem;
+}
+#container #distributor .distributor-inner .search-container > div input::placeholder {
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  color: #999999;
+  line-height: 2.4rem;
+}
+#container #distributor .distributor-inner .search-container > div input:focus {
+  outline: none;
+}
+#container #distributor .distributor-inner .search-container .choice {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1.4rem;
+}
+#container #distributor .distributor-inner .search-container .choice button {
+  justify-content: flex-start;
+  width: 12rem;
+  padding-left: 3.3rem;
+  gap: 0.5rem;
+}
+
 .page {
   width: 100%;
   display: flex;
@@ -252,6 +502,7 @@ input[type=checkbox]:checked + label {
   gap: 0.6rem;
 }
 .page ul li {
+  position: relative;
   box-sizing: border-box;
   width: 3.2rem;
   height: 3.2rem;
@@ -260,12 +511,27 @@ input[type=checkbox]:checked + label {
   border-radius: 0.3rem;
   text-align: center;
 }
+.page ul li.first-btn a {
+  background: url("../../../assets/images/common/first_arrow.png") no-repeat 100% 20%/auto;
+}
+.page ul li.prev-btn a {
+  background: url("../../../assets/images/common/prev_arrow.png") no-repeat 50% 40%/auto;
+}
+.page ul li.next-btn a {
+  background: url("../../../assets/images/common/next_arrow.png") no-repeat 60% 40%/auto;
+}
+.page ul li.end-btn a {
+  background: url("../../../assets/images/common/end_arrow.png") no-repeat 30% 20%/auto;
+}
 .page ul li a {
+  width: 100%;
+  height: 100%;
   color: #222;
-  font-family: "Noto Sans", sans-serif;
+  font-family: "Noto Sans KR", sans-serif;
   font-size: 1.6rem;
   font-weight: 400;
-  line-height: 3.2rem;
+  line-height: 2.4rem;
+  margin-top: 0.2rem;
 }
 
 .hide-item {
@@ -311,7 +577,7 @@ input[type=checkbox]:checked + label {
   text-align: center;
 }
 #header .inner .gnb li a {
-  font-family: "Noto Sans", sans-serif;
+  font-family: "Noto Sans KR", sans-serif;
   font-weight: 400;
   font-size: 1.6rem;
   color: #222;
@@ -344,7 +610,7 @@ input[type=checkbox]:checked + label {
   text-align: center;
 }
 #header .inner .menu .inner-menu li a {
-  font-family: "Noto Sans", sans-serif;
+  font-family: "Noto Sans KR", sans-serif;
   font-weight: 500;
   color: #222;
   font-size: 1.4rem;
@@ -361,7 +627,7 @@ input[type=checkbox]:checked + label {
   gap: 3.5rem;
 }
 #header .inner .login > div {
-  font-family: "Noto Sans", sans-serif;
+  font-family: "Noto Sans KR", sans-serif;
   font-weight: 700;
   font-size: 1.2rem;
   color: #222;
@@ -372,7 +638,7 @@ input[type=checkbox]:checked + label {
 }
 #header .inner .login button {
   color: #fff;
-  font-family: "Noto Sans", sans-serif;
+  font-family: "Noto Sans KR", sans-serif;
   font-size: 1.3rem;
   font-weight: 400;
   background: #3BB88C;
@@ -385,118 +651,6 @@ input[type=checkbox]:checked + label {
 
 #container #distributor {
   width: 100%;
-}
-#container #distributor .distributor-inner {
-  width: 100%;
-  max-width: 1300px;
-  margin: 0 auto;
-  padding-top: 3.3rem;
-}
-#container #distributor .distributor-inner > ul {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  height: 2.4rem;
-  padding-bottom: 0.3rem;
-}
-#container #distributor .distributor-inner > ul li {
-  position: relative;
-}
-#container #distributor .distributor-inner > ul li:first-child {
-  padding-right: 0.5rem;
-}
-#container #distributor .distributor-inner > ul li:nth-child(3) {
-  padding-left: 1.5rem;
-}
-#container #distributor .distributor-inner > ul li:nth-child(3)::before {
-  content: ">";
-  position: absolute;
-  left: 0.3rem;
-  top: 0;
-  font-family: "Noto Sans", sans-serif;
-  font-size: 1.4rem;
-  font-weight: 400;
-  color: #999999;
-}
-#container #distributor .distributor-inner > ul li a {
-  font-family: "Noto Sans", sans-serif;
-  font-size: 1.4rem;
-  font-weight: 400;
-  color: #999999;
-}
-#container #distributor .distributor-inner > strong {
-  font-family: "Noto Sans", sans-serif;
-  font-weight: 700;
-  font-size: 3rem;
-  color: #222;
-  line-height: 4.4rem;
-}
-#container #distributor .distributor-inner .btn-wrap {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 0.8rem;
-  padding: 1.6rem 0 1.2rem;
-}
-#container #distributor .distributor-inner .search-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
-#container #distributor .distributor-inner .search-container > div {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 1.4rem;
-}
-#container #distributor .distributor-inner .search-container > div input {
-  box-sizing: border-box;
-  width: 38rem;
-  height: 4.4rem;
-  background: #fff;
-  border-radius: 0.3rem;
-  border: 1px solid #BBBBBB;
-  padding: 0.9rem;
-  font-family: "Noto Sans", sans-serif;
-  font-weight: 400;
-  font-size: 1.6rem;
-  color: #222;
-  line-height: 2.4rem;
-}
-#container #distributor .distributor-inner .search-container > div input::-moz-placeholder {
-  font-family: "Noto Sans", sans-serif;
-  font-weight: 400;
-  font-size: 1.6rem;
-  color: #999999;
-  line-height: 2.4rem;
-}
-#container #distributor .distributor-inner .search-container > div input::placeholder {
-  font-family: "Noto Sans", sans-serif;
-  font-weight: 400;
-  font-size: 1.6rem;
-  color: #999999;
-  line-height: 2.4rem;
-}
-#container #distributor .distributor-inner .search-container > div input:focus {
-  outline: none;
-}
-#container #distributor .distributor-inner .search-container .choice {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 1.4rem;
-}
-#container #distributor .distributor-inner .search-container .choice button {
-  justify-content: flex-start;
-  width: 12rem;
-  padding-left: 3.3rem;
-  gap: 0.5rem;
 }
 #container #distributor .result {
   width: 100%;
@@ -514,7 +668,7 @@ input[type=checkbox]:checked + label {
 }
 #container #distributor .result table thead tr th {
   vertical-align: middle;
-  font-family: "Noto Sans", sans-serif;
+  font-family: "Noto Sans KR", sans-serif;
   font-weight: 500;
   font-size: 1.6rem;
   color: #fff;
@@ -532,9 +686,22 @@ input[type=checkbox]:checked + label {
   text-align: center;
   vertical-align: middle;
   border: 1px solid #BBBBBB;
-  font-family: "Noto Sans", sans-serif;
+  font-family: "Noto Sans KR", sans-serif;
   font-weight: 400;
   font-size: 1.4rem;
   color: #222;
-  letter-spacing: -0.1rem;
+  letter-spacing: -0.09em;
+}
+#container #distributor .page {
+  position: relative;
+  margin: 2.6rem 0 5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+#container #distributor .page button {
+  position: absolute;
+  right: 0;
+  width: 16rem;
 }

@@ -4,96 +4,6 @@
 #container {
     #distributor {
         width: 100%;
-        .distributor-inner {
-            width: 100%;
-            max-width: 1300px;
-            margin: 0 auto;
-            padding-top: 3.3rem;
-            > ul {
-                @include flexbox(row, flex-start, center);
-                height: 2.4rem;
-                padding-bottom: 0.3rem;
-                li {
-                    position: relative;
-                    &:first-child {
-                        padding-right: 0.5rem;
-                    }
-                    &:nth-child(3) {
-                        padding-left: 1.5rem;
-                        &::before {
-                            content: '>';
-                            position: absolute;
-                            left: 0.3rem;
-                            top: 0;
-                            font-family: $notosans;
-                            font-size: 1.4rem;
-                            font-weight: 400;
-                            color: #999999;
-                        }
-                    }
-                    a {
-                        font-family: $notosans;
-                        font-size: 1.4rem;
-                        font-weight: 400;
-                        color: #999999;
-                    }
-                }
-            }
-            > strong {
-                font-family: $notosans;
-                font-weight: 700;
-                font-size: 3rem;
-                color: $black;
-                line-height: 4.4rem;
-            }
-            .btn-wrap {
-                width: 100%;
-                @include flexbox(row, flex-start, center);
-                gap: 0.8rem;
-                padding: 1.6rem 0 1.2rem;
-            }
-            .search-container {
-                @include flexbox(row, space-between, center);
-                > div {
-                    @include flexbox(row, flex-start, center);
-                    gap: 1.4rem;
-                    input {
-                        box-sizing: border-box;
-                        width: 38rem;
-                        height: 4.4rem;
-                        background: $white;
-                        border-radius: 0.3rem;
-                        border: 1px solid #BBBBBB;
-                        padding: 0.9rem;
-                        font-family: $notosans;
-                        font-weight: 400;
-                        font-size: 1.6rem;
-                        color: $black;
-                        line-height: 2.4rem;
-                        &::placeholder {
-                            font-family: $notosans;
-                            font-weight: 400;
-                            font-size: 1.6rem;
-                            color: #999999;
-                            line-height: 2.4rem;
-                        }
-                        &:focus {
-                            outline: none;
-                        }
-                    }
-                }
-                .choice {
-                    @include flexbox(row, flex-end, center);
-                    gap: 1.4rem;
-                    button {
-                        justify-content: flex-start;
-                        width: 12rem;
-                        padding-left: 3.3rem;
-                        gap: 0.5rem;
-                    }
-                }
-            }
-        }
         .result {
             width: 100%;
             padding-top: 1.2rem;
@@ -130,10 +40,20 @@
                             font-weight: 400;
                             font-size: 1.4rem;
                             color: $black;
-                            letter-spacing: -0.1rem;
+                            letter-spacing: -0.09em;
                         }
                     }
                 }
+            }
+        }
+        .page {
+            position: relative;
+            margin: 2.6rem 0 5rem;
+            @include flexbox(row, center, center);
+            button {
+                position: absolute;
+                right: 0;
+                width: 16rem;
             }
         }
     }
