@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메인 관리</title>
+    <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+    <script src="../../../assets/js/sub.js"></script>
+    <link href="../../../assets/css/reset.css" rel="stylesheet">
+    <link href="../../../assets/css/sub.css" rel="stylesheet">
+</head>
+<body>
+    <header id="header"></header>
+    <div id="container">
+        <section id="distributor">
+            <div class="distributor-inner">
+                <ul>
+                    <li><a href="javascript:void(0)"><img src="../../../assets/images/common/home.png" alt="홈 이미지"></a></li>
+                    <li><a href="javascript:void(0)">상담/문의</a></li>
+                    <li><a href="../contents/main_manage.html">메인 관리</a></li>
+                </ul>
+                <strong>메인 관리</strong>
+                <div class="main-setting">
+                    <button type="button" id="heroBtn" class="select btn-type2">히어로 설정</button>
+                    <button type="button" id="bannerBtn" class="non-select btn-type2">배너 설정</button>
+                    <button type="button" class="non-select btn-type1">Manifesto 설정</button>
+                    <button type="button" class="non-select btn-type1">제품 활용 사례</button>
+                </div>
+                <div class="main-result">
+                    <div id="hero">
+                        <div class="title">
+                            <p><strong>히어로</strong> * 히어로 이미지는 8개까지 등록 가능합니다.</p>
+                            <button type="button" class="disable btn-type2 plus">등록<img src="../../../assets/images/common/plus_gray.png" alt="플러스 버튼"></button>
+                        </div>
+                        <table>
+                            <caption class="hide-item">리스트</caption>
+                            <colgroup>
+                                <col width="15%"/>
+                                <col width="30%"/>
+                                <col width="30%"/>
+                                <col width="25%"/>
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>No.</th>
+                                    <th>PC</th>
+                                    <th>Mobile</th>
+                                    <th>노출 설정</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>이미지</td>
+                                    <td>이미지</td>
+                                    <td>
+                                        <input type="radio" id="expose01" name="choose01">
+                                        <label for="expose01">노출</label>
+                                        <input type="radio" id="unExpose01" name="choose01">
+                                        <label for="unExpose01">미노출</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>이미지</td>
+                                    <td>이미지</td>
+                                    <td>
+                                        <input type="radio" id="expose02" name="choose02">
+                                        <label for="expose02">노출</label>
+                                        <input type="radio" id="unExpose02" name="choose02">
+                                        <label for="unExpose02">미노출</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>이미지</td>
+                                    <td>이미지</td>
+                                    <td>
+                                        <input type="radio" id="expose03" name="choose03">
+                                        <label for="expose03">노출</label>
+                                        <input type="radio" id="unExpose03" name="choose03">
+                                        <label for="unExpose03">미노출</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>이미지</td>
+                                    <td>이미지</td>
+                                    <td>
+                                        <input type="radio" id="expose04" name="choose04">
+                                        <label for="expose04">노출</label>
+                                        <input type="radio" id="unExpose04" name="choose04">
+                                        <label for="unExpose04">미노출</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>이미지</td>
+                                    <td>이미지</td>
+                                    <td>
+                                        <input type="radio" id="expose05" name="choose05">
+                                        <label for="expose05">노출</label>
+                                        <input type="radio" id="unExpose05" name="choose05">
+                                        <label for="unExpose05">미노출</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>이미지</td>
+                                    <td>이미지</td>
+                                    <td>
+                                        <input type="radio" id="expose06" name="choose06">
+                                        <label for="expose06">노출</label>
+                                        <input type="radio" id="unExpose06" name="choose06">
+                                        <label for="unExpose06">미노출</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td>이미지</td>
+                                    <td>이미지</td>
+                                    <td>
+                                        <input type="radio" id="expose07" name="choose07">
+                                        <label for="expose07">노출</label>
+                                        <input type="radio" id="unExpose07" name="choose07">
+                                        <label for="unExpose07">미노출</label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td>이미지</td>
+                                    <td>이미지</td>
+                                    <td>
+                                        <input type="radio" id="expose08" name="choose08">
+                                        <label for="expose08">노출</label>
+                                        <input type="radio" id="unExpose08" name="choose08">
+                                        <label for="unExpose08">미노출</label>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div id="banner">
+                        <div class="title">
+                            <p><strong>배너</strong></p>
+                        </div>
+                        <table>
+                            <caption class="hide-item">리스트</caption>
+                            <colgroup>
+                                <col width=""/>
+                                <col width=""/>
+                                <col width=""/>
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>구분</th>
+                                    <th>이미지 / 동영상 첨부</th>
+                                    <th>미리보기</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td rowspan="3">국문</td>
+                                    <td>
+                                        <div><span>PC</span></div>
+                                        <label for="korean01" class="hide-item"></label>
+                                        <input type="text" id="korean01">
+                                        <div>이미지 사이즈 1216*300px</div>
+                                        <button>파일선택</button>
+                                    </td>
+                                    <td class="border-left"><button type="button" class="select">미리보기</button></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div><span>Mobile</span></div>
+                                        <label></label>
+                                        <input type="text">
+                                        <button>파일선택</button>
+                                    </td>
+                                    <td class="border-left"><button type="button" class="select">미리보기</button></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div><span>링크</span></div>
+                                        <label></label>
+                                        <input type="text">
+                                        <button>파일선택</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="3">영문</td>
+                                    <td>
+                                        <div><span>PC</span></div>
+                                        <label></label>
+                                        <input type="text">
+                                        <button>파일선택</button>
+                                    </td>
+                                    <td class="border-left"><button type="button" class="select">미리보기</button></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div><span>Mobile</span></div>
+                                        <label></label>
+                                        <input type="text">
+                                        <button>파일선택</button>
+                                    </td>
+                                    <td class="border-left"><button type="button" class="select">미리보기</button></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div><span>링크</span></div>
+                                        <label></label>
+                                        <input type="text">
+                                        <button>파일선택</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

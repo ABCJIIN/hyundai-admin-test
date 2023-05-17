@@ -3,53 +3,7 @@
 
 #container {
     #distributor {
-        width: 100%;
-        .result {
-            width: 100%;
-            padding-top: 1.2rem;
-            table {
-                width: 100%;
-                border: 1px solid #BBBBBB;
-                thead {
-                    background: #3BB88C;
-                    tr {
-                        height: 3rem;
-                        th {
-                            vertical-align: middle;
-                            font-family: $notosans;
-                            font-weight: 500;
-                            font-size: 1.6rem;
-                            color: $white;
-                        }
-                    }
-                }
-                tbody {
-                    tr {
-                        height: 3.6rem;
-                        &:nth-child(odd) {
-                            background: #F5FCF9;
-                        }
-                        &:nth-child(even) {
-                            background: $white;
-                        }
-                        td {
-                            text-align: center;
-                            vertical-align: middle;
-                            border: 1px solid #BBBBBB;
-                            font-family: $notosans;
-                            font-weight: 400;
-                            font-size: 1.4rem;
-                            color: $black;
-                            letter-spacing: -0.09em;
-                        }
-                    }
-                }
-            }
-        }
         .page {
-            position: relative;
-            margin: 2.6rem 0 5rem;
-            @include flexbox(row, center, center);
             button {
                 position: absolute;
                 right: 0;

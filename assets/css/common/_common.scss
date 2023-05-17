@@ -28,8 +28,6 @@ button {
     font-weight: 400;
     font-size: 1.6rem;
     line-height: 2.4rem;
-    width: 16rem;
-    height: 4.4rem;
     @include flexbox(row, center, center);
     cursor: pointer;
     &.select {
@@ -44,10 +42,33 @@ button {
         border: 1px solid #BBBBBB;
     }
     &.disable {
-        width: 12rem;
         color: #999999;
         background: #DDDDDD;
         border: 1px solid #999999;
+    }
+    &.plus {
+        justify-content: flex-start;
+        width: 12rem;
+        padding-left: 3.3rem;
+        gap: 0.5rem;
+    }
+    &.btn-type1 {
+        width: 16rem;
+        height: 4.4rem;
+    }
+    &.btn-type2 {
+        width: 12rem;
+        height: 4.4rem;
+    }
+    &.tb-btn {
+        width: 8rem;
+        height: 2.4rem;
+        margin: 0 auto;
+        font-size: 1.4rem;
+        color: $white;
+        background: #3BB88C;
+        border: none;
+        cursor: pointer;
     }
 }
 
@@ -152,50 +173,94 @@ input[type=checkbox] {
                 color: $black;
                 line-height: 4.4rem;
             }
-            .btn-wrap {
+            .setting {
+                padding-top: 1.6rem;
+                @include flexbox(column, flex-start, flex-start);
                 width: 100%;
-                @include flexbox(row, flex-start, center);
-                gap: 0.8rem;
-                padding: 1.6rem 0 1.2rem;
-            }
-            .search-container {
-                @include flexbox(row, space-between, center);
-                > div {
+                .btn-wrap {
+                    width: 100%;
                     @include flexbox(row, flex-start, center);
-                    gap: 1.4rem;
-                    input {
-                        box-sizing: border-box;
-                        width: 38rem;
-                        height: 4.4rem;
-                        background: $white;
-                        border-radius: 0.3rem;
-                        border: 1px solid #BBBBBB;
-                        padding: 0.9rem;
-                        font-family: $notosans;
-                        font-weight: 400;
-                        font-size: 1.6rem;
-                        color: $black;
-                        line-height: 2.4rem;
-                        &::placeholder {
+                    gap: 0.8rem;
+                    padding-bottom: 1.2rem;
+                }
+                .form-container {
+                    width: 100%;
+                    @include flexbox(row, space-between, center);
+                    .search-container {
+                        @include flexbox(row, flex-start, center);
+                        gap: 1.4rem;
+                        input {
+                            box-sizing: border-box;
+                            width: 38rem;
+                            height: 4.4rem;
+                            background: $white;
+                            border-radius: 0.3rem;
+                            border: 1px solid #BBBBBB;
+                            padding: 0.9rem;
                             font-family: $notosans;
                             font-weight: 400;
                             font-size: 1.6rem;
-                            color: #999999;
+                            color: $black;
                             line-height: 2.4rem;
-                        }
-                        &:focus {
-                            outline: none;
+                            &::placeholder {
+                                font-family: $notosans;
+                                font-weight: 400;
+                                font-size: 1.6rem;
+                                color: #999999;
+                                line-height: 2.4rem;
+                            }
+                            &:focus {
+                                outline: none;
+                            }
                         }
                     }
+                    .select-container {
+                        @include flexbox(row, flex-start, center);
+                        gap: 1.4rem;
+                    }
                 }
-                .choice {
-                    @include flexbox(row, flex-end, center);
-                    gap: 1.4rem;
-                    button {
-                        justify-content: flex-start;
-                        width: 12rem;
-                        padding-left: 3.3rem;
-                        gap: 0.5rem;
+            }
+            .result {
+                width: 100%;
+                margin-top: 1.2rem;
+                table {
+                    width: 100%;
+                    border: 1px solid #BBBBBB;
+                    thead {
+                        background: #3BB88C;
+                        tr {
+                            height: 3rem;
+                            th {
+                                vertical-align: middle;
+                                font-family: $notosans;
+                                font-weight: 500;
+                                font-size: 1.6rem;
+                                color: $white;
+                                line-height: 2.4rem;
+                            }
+                        }
+                    }
+                    tbody {
+                        tr {
+                            height: 3.6rem;
+                            &:nth-child(odd) {
+                                background: #F5FCF9;
+                            }
+                            &:nth-child(even) {
+                                background: $white;
+                            }
+                            td {
+                                text-align: center;
+                                vertical-align: middle;
+                                border: 1px solid #BBBBBB;
+                                font-family: $notosans;
+                                font-weight: 400;
+                                font-size: 1.4rem;
+                                color: $black;
+                                letter-spacing: -0.09em;
+                                line-height: 2.4rem;
+                            }
+                        }
                     }
                 }
             }
@@ -204,6 +269,8 @@ input[type=checkbox] {
 }
 
 .page {
+    position: relative;
+    margin: 2.6rem 0 5rem;
     width: 100%;
     @include flexbox(row,center, center);
     ul {

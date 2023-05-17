@@ -21,32 +21,34 @@
                     <li><a href="index.html">대리점 회원</a></li>
                 </ul>
                 <strong>대리점 회원</strong>
-                <div class="btn-wrap">
-                    <button class="select" type="button">활성(10,345)</button>
-                    <button class="non-select" type="button">비활성화(1,345)</button>
-                </div>
-                <div class="search-container">
-                    <div>
-                        <label class="hide-item" for="search"></label>
-                        <input type="text" id="search" placeholder="검색어 입력">
-                        <button class="disable">검색</button>
+                <div class="setting">
+                    <div class="btn-wrap">
+                        <button class="select btn-type1" type="button">활성(10,345)</button>
+                        <button class="non-select btn-type1" type="button">비활성화(1,345)</button>
                     </div>
-                    <div class="choice">
-                        <label class="hide-item" for="regionAll"></label>
-                        <select class="txt-select" id="regionAll">
-                            <option selected disabled hidden>지역전체</option>
-                            <option>하나</option>
-                            <option>둘</option>
-                            <option>셋</option>
-                        </select>
-                        <label class="hide-item" for="count"></label>
-                        <select class="num-select" id="count">
-                            <option selected>25개</option>
-                            <option>20개</option>
-                            <option>15개</option>
-                            <option>10개</option>
-                        </select>
-                        <button class="select" type="button">등록<img src="./assets/images/common/plus.png"></button>
+                    <div class="form-container">
+                        <div class="search-container">
+                            <label class="hide-item" for="search"></label>
+                            <input type="text" id="search" placeholder="검색어 입력">
+                            <button type="button" class="disable btn-type2">검색</button>
+                        </div>
+                        <div class="select-container">
+                            <label class="hide-item" for="regionAll"></label>
+                            <select class="txt-select" id="regionAll">
+                                <option selected disabled hidden>지역전체</option>
+                                <option>하나</option>
+                                <option>둘</option>
+                                <option>셋</option>
+                            </select>
+                            <label class="hide-item" for="count"></label>
+                            <select class="num-select" id="count">
+                                <option selected>25개</option>
+                                <option>20개</option>
+                                <option>15개</option>
+                                <option>10개</option>
+                            </select>
+                            <button class="select btn-type2 plus" type="button">등록<img src="./assets/images/common/plus.png" alt="플러스 버튼"></button>
+                        </div>
                     </div>
                 </div>
                 <div class="result">
@@ -420,7 +422,7 @@
                         <li class="next-btn"><a href="javascript:void(0)"></a></li>
                         <li class="end-btn"><a href="javascript:void(0)"></a></li>
                     </ul>
-                    <button type="button" class="disable">회원 비활성화</button>
+                    <button type="button" class="disable btn-type1">회원 비활성화</button>
                 </div>
             </div>
         </section>

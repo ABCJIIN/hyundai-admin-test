@@ -17,8 +17,6 @@ button {
   font-weight: 400;
   font-size: 1.6rem;
   line-height: 2.4rem;
-  width: 16rem;
-  height: 4.4rem;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -37,10 +35,33 @@ button.non-select {
   border: 1px solid #BBBBBB;
 }
 button.disable {
-  width: 12rem;
   color: #999999;
   background: #DDDDDD;
   border: 1px solid #999999;
+}
+button.plus {
+  justify-content: flex-start;
+  width: 12rem;
+  padding-left: 3.3rem;
+  gap: 0.5rem;
+}
+button.btn-type1 {
+  width: 16rem;
+  height: 4.4rem;
+}
+button.btn-type2 {
+  width: 12rem;
+  height: 4.4rem;
+}
+button.tb-btn {
+  width: 8rem;
+  height: 2.4rem;
+  margin: 0 auto;
+  font-size: 1.4rem;
+  color: #fff;
+  background: #3BB88C;
+  border: none;
+  cursor: pointer;
 }
 
 select {
@@ -148,29 +169,38 @@ input[type=checkbox]:checked + label {
   color: #222;
   line-height: 4.4rem;
 }
-#container #distributor .distributor-inner .btn-wrap {
+#container #distributor .distributor-inner .setting {
+  padding-top: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+}
+#container #distributor .distributor-inner .setting .btn-wrap {
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
   gap: 0.8rem;
-  padding: 1.6rem 0 1.2rem;
+  padding-bottom: 1.2rem;
 }
-#container #distributor .distributor-inner .search-container {
+#container #distributor .distributor-inner .setting .form-container {
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
-#container #distributor .distributor-inner .search-container > div {
+#container #distributor .distributor-inner .setting .form-container .search-container {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
   gap: 1.4rem;
 }
-#container #distributor .distributor-inner .search-container > div input {
+#container #distributor .distributor-inner .setting .form-container .search-container input {
   box-sizing: border-box;
   width: 38rem;
   height: 4.4rem;
@@ -184,38 +214,76 @@ input[type=checkbox]:checked + label {
   color: #222;
   line-height: 2.4rem;
 }
-#container #distributor .distributor-inner .search-container > div input::-moz-placeholder {
+#container #distributor .distributor-inner .setting .form-container .search-container input::-moz-placeholder {
   font-family: "Noto Sans KR", sans-serif;
   font-weight: 400;
   font-size: 1.6rem;
   color: #999999;
   line-height: 2.4rem;
 }
-#container #distributor .distributor-inner .search-container > div input::placeholder {
+#container #distributor .distributor-inner .setting .form-container .search-container input::placeholder {
   font-family: "Noto Sans KR", sans-serif;
   font-weight: 400;
   font-size: 1.6rem;
   color: #999999;
   line-height: 2.4rem;
 }
-#container #distributor .distributor-inner .search-container > div input:focus {
+#container #distributor .distributor-inner .setting .form-container .search-container input:focus {
   outline: none;
 }
-#container #distributor .distributor-inner .search-container .choice {
+#container #distributor .distributor-inner .setting .form-container .select-container {
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
+  justify-content: flex-start;
   align-items: center;
   gap: 1.4rem;
 }
-#container #distributor .distributor-inner .search-container .choice button {
-  justify-content: flex-start;
-  width: 12rem;
-  padding-left: 3.3rem;
-  gap: 0.5rem;
+#container #distributor .distributor-inner .result {
+  width: 100%;
+  margin-top: 1.2rem;
+}
+#container #distributor .distributor-inner .result table {
+  width: 100%;
+  border: 1px solid #BBBBBB;
+}
+#container #distributor .distributor-inner .result table thead {
+  background: #3BB88C;
+}
+#container #distributor .distributor-inner .result table thead tr {
+  height: 3rem;
+}
+#container #distributor .distributor-inner .result table thead tr th {
+  vertical-align: middle;
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 500;
+  font-size: 1.6rem;
+  color: #fff;
+  line-height: 2.4rem;
+}
+#container #distributor .distributor-inner .result table tbody tr {
+  height: 3.6rem;
+}
+#container #distributor .distributor-inner .result table tbody tr:nth-child(odd) {
+  background: #F5FCF9;
+}
+#container #distributor .distributor-inner .result table tbody tr:nth-child(even) {
+  background: #fff;
+}
+#container #distributor .distributor-inner .result table tbody tr td {
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid #BBBBBB;
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 400;
+  font-size: 1.4rem;
+  color: #222;
+  letter-spacing: -0.09em;
+  line-height: 2.4rem;
 }
 
 .page {
+  position: relative;
+  margin: 2.6rem 0 5rem;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -289,8 +357,6 @@ button {
   font-weight: 400;
   font-size: 1.6rem;
   line-height: 2.4rem;
-  width: 16rem;
-  height: 4.4rem;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -309,10 +375,33 @@ button.non-select {
   border: 1px solid #BBBBBB;
 }
 button.disable {
-  width: 12rem;
   color: #999999;
   background: #DDDDDD;
   border: 1px solid #999999;
+}
+button.plus {
+  justify-content: flex-start;
+  width: 12rem;
+  padding-left: 3.3rem;
+  gap: 0.5rem;
+}
+button.btn-type1 {
+  width: 16rem;
+  height: 4.4rem;
+}
+button.btn-type2 {
+  width: 12rem;
+  height: 4.4rem;
+}
+button.tb-btn {
+  width: 8rem;
+  height: 2.4rem;
+  margin: 0 auto;
+  font-size: 1.4rem;
+  color: #fff;
+  background: #3BB88C;
+  border: none;
+  cursor: pointer;
 }
 
 select {
@@ -420,29 +509,38 @@ input[type=checkbox]:checked + label {
   color: #222;
   line-height: 4.4rem;
 }
-#container #distributor .distributor-inner .btn-wrap {
+#container #distributor .distributor-inner .setting {
+  padding-top: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+}
+#container #distributor .distributor-inner .setting .btn-wrap {
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
   gap: 0.8rem;
-  padding: 1.6rem 0 1.2rem;
+  padding-bottom: 1.2rem;
 }
-#container #distributor .distributor-inner .search-container {
+#container #distributor .distributor-inner .setting .form-container {
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
-#container #distributor .distributor-inner .search-container > div {
+#container #distributor .distributor-inner .setting .form-container .search-container {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
   gap: 1.4rem;
 }
-#container #distributor .distributor-inner .search-container > div input {
+#container #distributor .distributor-inner .setting .form-container .search-container input {
   box-sizing: border-box;
   width: 38rem;
   height: 4.4rem;
@@ -456,38 +554,76 @@ input[type=checkbox]:checked + label {
   color: #222;
   line-height: 2.4rem;
 }
-#container #distributor .distributor-inner .search-container > div input::-moz-placeholder {
+#container #distributor .distributor-inner .setting .form-container .search-container input::-moz-placeholder {
   font-family: "Noto Sans KR", sans-serif;
   font-weight: 400;
   font-size: 1.6rem;
   color: #999999;
   line-height: 2.4rem;
 }
-#container #distributor .distributor-inner .search-container > div input::placeholder {
+#container #distributor .distributor-inner .setting .form-container .search-container input::placeholder {
   font-family: "Noto Sans KR", sans-serif;
   font-weight: 400;
   font-size: 1.6rem;
   color: #999999;
   line-height: 2.4rem;
 }
-#container #distributor .distributor-inner .search-container > div input:focus {
+#container #distributor .distributor-inner .setting .form-container .search-container input:focus {
   outline: none;
 }
-#container #distributor .distributor-inner .search-container .choice {
+#container #distributor .distributor-inner .setting .form-container .select-container {
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
+  justify-content: flex-start;
   align-items: center;
   gap: 1.4rem;
 }
-#container #distributor .distributor-inner .search-container .choice button {
-  justify-content: flex-start;
-  width: 12rem;
-  padding-left: 3.3rem;
-  gap: 0.5rem;
+#container #distributor .distributor-inner .result {
+  width: 100%;
+  margin-top: 1.2rem;
+}
+#container #distributor .distributor-inner .result table {
+  width: 100%;
+  border: 1px solid #BBBBBB;
+}
+#container #distributor .distributor-inner .result table thead {
+  background: #3BB88C;
+}
+#container #distributor .distributor-inner .result table thead tr {
+  height: 3rem;
+}
+#container #distributor .distributor-inner .result table thead tr th {
+  vertical-align: middle;
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 500;
+  font-size: 1.6rem;
+  color: #fff;
+  line-height: 2.4rem;
+}
+#container #distributor .distributor-inner .result table tbody tr {
+  height: 3.6rem;
+}
+#container #distributor .distributor-inner .result table tbody tr:nth-child(odd) {
+  background: #F5FCF9;
+}
+#container #distributor .distributor-inner .result table tbody tr:nth-child(even) {
+  background: #fff;
+}
+#container #distributor .distributor-inner .result table tbody tr td {
+  text-align: center;
+  vertical-align: middle;
+  border: 1px solid #BBBBBB;
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 400;
+  font-size: 1.4rem;
+  color: #222;
+  letter-spacing: -0.09em;
+  line-height: 2.4rem;
 }
 
 .page {
+  position: relative;
+  margin: 2.6rem 0 5rem;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -649,57 +785,6 @@ input[type=checkbox]:checked + label {
   cursor: pointer;
 }
 
-#container #distributor {
-  width: 100%;
-}
-#container #distributor .result {
-  width: 100%;
-  padding-top: 1.2rem;
-}
-#container #distributor .result table {
-  width: 100%;
-  border: 1px solid #BBBBBB;
-}
-#container #distributor .result table thead {
-  background: #3BB88C;
-}
-#container #distributor .result table thead tr {
-  height: 3rem;
-}
-#container #distributor .result table thead tr th {
-  vertical-align: middle;
-  font-family: "Noto Sans KR", sans-serif;
-  font-weight: 500;
-  font-size: 1.6rem;
-  color: #fff;
-}
-#container #distributor .result table tbody tr {
-  height: 3.6rem;
-}
-#container #distributor .result table tbody tr:nth-child(odd) {
-  background: #F5FCF9;
-}
-#container #distributor .result table tbody tr:nth-child(even) {
-  background: #fff;
-}
-#container #distributor .result table tbody tr td {
-  text-align: center;
-  vertical-align: middle;
-  border: 1px solid #BBBBBB;
-  font-family: "Noto Sans KR", sans-serif;
-  font-weight: 400;
-  font-size: 1.4rem;
-  color: #222;
-  letter-spacing: -0.09em;
-}
-#container #distributor .page {
-  position: relative;
-  margin: 2.6rem 0 5rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
 #container #distributor .page button {
   position: absolute;
   right: 0;
